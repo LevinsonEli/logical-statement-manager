@@ -1,6 +1,6 @@
 
-import LogicalStatementManager from "../LogicalStatementManager";
-import Errors from '../Errors';
+import LogicalStatementManager from "../src/LogicalStatementManager";
+import Errors from '../src/Errors';
 
 describe('Logical Statement Manager unit tests', () => {
 
