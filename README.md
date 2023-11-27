@@ -46,7 +46,9 @@ const logicalStmtManager = new LogicalStatementManager<boolean>();
 logicalStmtManager.newStmt(
   logicalStmtManager.newStmt(true)
   .or(false))
-.and(logicalStmtManager.newStmt(false).or(true));
+.and(
+  logicalStmtManager.newStmt(false)
+  .or(true));
 
 console.log(logicalStmtManager.toString()); // (true OR false) AND (false OR true)
 ```
