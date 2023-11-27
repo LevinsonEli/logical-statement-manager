@@ -31,9 +31,33 @@ export default class LogicalStatementManager<T> {
     }
 
     public and(stmtArgs: T | LogicalStatementManager<T>): LogicalStatementManager<T> {
-        if (this.statementsStack.length === 0)
-            Errors.throwCannotStartMethodWithAnd();
+        this.checkAddingLogicOperatorEligibility();
         return this.logicalOperate(LogicalStatementManager.LOGICAL_OPERATORS.AND, stmtArgs);
+    }
+
+    public andNot(stmtArgs: T | LogicalStatementManager<T>): LogicalStatementManager<T> {
+        this.checkAddingLogicOperatorEligibility();
+        return this.logicalOperate(LogicalStatementManager.LOGICAL_OPERATORS.AND_NOT, stmtArgs);
+    }
+
+    public or(stmtArgs: T | LogicalStatementManager<T>): LogicalStatementManager<T> {
+        this.checkAddingLogicOperatorEligibility();
+        return this.logicalOperate(LogicalStatementManager.LOGICAL_OPERATORS.OR, stmtArgs);
+    }
+
+    public orNot(stmtArgs: T | LogicalStatementManager<T>): LogicalStatementManager<T> {
+        this.checkAddingLogicOperatorEligibility();
+        return this.logicalOperate(LogicalStatementManager.LOGICAL_OPERATORS.OR_NOT, stmtArgs);
+    }
+
+    public xor(stmtArgs: T | LogicalStatementManager<T>): LogicalStatementManager<T> {
+        this.checkAddingLogicOperatorEligibility();
+        return this.logicalOperate(LogicalStatementManager.LOGICAL_OPERATORS.XOR, stmtArgs);
+    }
+
+    public xorNot(stmtArgs: T | LogicalStatementManager<T>): LogicalStatementManager<T> {
+        this.checkAddingLogicOperatorEligibility();
+        return this.logicalOperate(LogicalStatementManager.LOGICAL_OPERATORS.XOR_NOT, stmtArgs);
     }
 
     private logicalOperate(logicalOperator: string | undefined, stmtArgs: T | LogicalStatementManager<T>): LogicalStatementManager<T> {
@@ -102,6 +126,12 @@ export default class LogicalStatementManager<T> {
         } else
             this._statementsStack.splice(startStmtInx, 0, LogicalStatementManager.BRACKETS.OPEN);
         this._statementsStack.push(LogicalStatementManager.BRACKETS.CLOSE);
+    }
+
+    private checkAddingLogicOperatorEligibility(): boolean {
+        if (this.statementsStack.length === 0)
+            Errors.throwCannotStartMethodWithAnd();
+        return true;
     }
 
     public clean(): void {
