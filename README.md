@@ -3,12 +3,12 @@ Logical Statement Manager is a tool for storing and operating with statements th
 
 # Code Repository
 [https://github.com/LevinsonEli/logical-statement-manager](https://github.com/LevinsonEli/logical-statement-manager)
-# Instalation <a href="#instalation" id="instalation-heading">#</a>
+# Installation
 ```
 npm i logical-stmt-manager
 ```
 ## How to use
-1. [Install](#instalation) the package
+1. [Install](#instalation-) the package
 2. Import the classes (the ComparisonStatement - is optional)
 ```
 import { LogicalStatementManager, ComparisonStatement } from 'logical-stmt-manager';
