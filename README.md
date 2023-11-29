@@ -28,7 +28,7 @@ logicalStmtManager.newStmt(stmt1);
 You can use other operators on statements such as .andNot(), .or(), orNot(), .xor(), .xorNot()
 
 ## Examples
-1. A = B
+<b>1. A = B</b>
 ```
 const logicalStmtManager = new LogicalStatementManager<ComparisonStatement<string>>();
 const stmt1 = new ComparisonStatement<string>({ leftOperand: 'A', operator: '=', rightOperand: 'B' });
@@ -37,7 +37,7 @@ logicalStmtManager.newStmt(stmt1);
 
 console.log(logicalStmtManager.toString()); // A = B
 ```
-2. A and (B OR C)
+<b>2. A and (B OR C)</b>
 ```
 const logicalStmtManager = new LogicalStatementManager<string>();
 
@@ -45,7 +45,7 @@ logicalStmtManager.newStmt('A').and(logicalStmtManager.newStmt('B').or('C'));
 
 console.log(logicalStmtManager.toString()); // A and (B OR C)
 ```
-3. (true OR false) AND (false OR true)
+<b>3. (true OR false) AND (false OR true)</b>
 ```
 const logicalStmtManager = new LogicalStatementManager<boolean>();
 
