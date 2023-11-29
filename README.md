@@ -8,7 +8,7 @@ Logical Statement Manager is a tool for storing and operating with statements th
 npm i logical-stmt-manager
 ```
 ## How to use
-1. [Install](#instalation-) the package
+1. [Install](#Installation) the package
 2. Import the classes (the ComparisonStatement - is optional)
 ```
 import { LogicalStatementManager, ComparisonStatement } from 'logical-stmt-manager';
