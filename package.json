@@ -8,7 +8,7 @@
     "typescript": "^5.3.2"
   },
   "name": "logical-stmt-manager",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "main": "./dist/index.js",
   "directories": {
     "test": "tests"
@@ -19,7 +19,7 @@
     "watch": "npx tsc -w",
     "test": "jest"
   },
-  "keywords": [],
+  "keywords": ["statement", "logical", "operator", "sql"],
   "author": "",
   "license": "ISC",
   "description": "",
